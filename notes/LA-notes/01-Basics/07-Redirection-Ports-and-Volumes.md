@@ -1,4 +1,4 @@
-G Redirection Ports and Volumes
+# Redirection Ports and Volumes
 
 - Whenever we have the docker containers running on our host with ports exposed depending on the applications within the docker container. 
 - So in this case we need to connect to that application through the IP Address of the container but not through the host directly.
