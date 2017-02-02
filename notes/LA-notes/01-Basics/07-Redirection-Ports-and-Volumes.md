@@ -34,3 +34,10 @@
 ---
 
 - Now let us see how to mount any directory from our localhost to our container.
+- If we are going to have continuous changes to our application or configs which we are using on our container or else some of the files or data which are being changed continuously then it would be safe and easy to have them on the host on a directory and mounted it to the container while running.
+- Once we have mounted a directory while running the container then it will directly have all the changed of the files or data of the directory mounted from the host on to the container.
+- To mount a directory we need to use ***-v*** option and directory from the host to be mounted, remote directory on the container separated by a colon
+
+```
+# docker run -d -p 80:80 -v /var/www:/usr/share/nginx/html --name=MyWeb1 nginx:latest
+```
