@@ -16,3 +16,12 @@ libvert
 LXC(Linux Containers)
 systemd-nspawn
 ```
+
+- Docker distinguishes three important concepts: 
+	- docker machines
+	- docker images
+	- docker containers
+	
+- Docker containers are executions of an specific runtime environment. For example, to simulate a machine with an specific database up. These runtime environments are called Docker images, which are the result of executing the set of commands that appear in an specific script-like file called Dockerfile. Therefore, Docker allow having multiple containers of an specific Docker image. These could be compared with the concepts of program and process. Indeed, containers like processes, can be created, stopped, died, or running.
+
+- Docker machines are local (and virtual) machines or remote machines(e.g in a cloud such as Amazon AWS or DigitalOcean) with a docker running. Like physical machines, docker machines has an specific IP address. Each docker machine can manage multiple docker images and containers. From our own personal computer, the docker-machine command, allow us connecting to all our docker machines to manage their containers and images.
