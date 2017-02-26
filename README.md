@@ -1,6 +1,5 @@
-![Docker](/images/dockericon-small.png)
+![Docker](/images/dockericon-large.png)
 
-# Docker
 
 ***Definition*** : Docker is an open source project to pack, ship and run any application as a lightweight container.
 
