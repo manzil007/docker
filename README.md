@@ -26,3 +26,13 @@ systemd-nspawn
 - Docker containers are executions of an specific runtime environment. For example, to simulate a machine with an specific database up. These runtime environments are called Docker images, which are the result of executing the set of commands that appear in an specific script-like file called Dockerfile. Therefore, Docker allow having multiple containers of an specific Docker image. These could be compared with the concepts of program and process. Indeed, containers like processes, can be created, stopped, died, or running.
 
 - Docker machines are local (and virtual) machines or remote machines(e.g in a cloud such as Amazon AWS or DigitalOcean) with a docker running. Like physical machines, docker machines has an specific IP address. Each docker machine can manage multiple docker images and containers. From our own personal computer, the docker-machine command, allow us connecting to all our docker machines to manage their containers and images.
+
+# Docker engine dependencies from the Linux kernel
+
+- The dependencies on the Linux kernel can be broadly categorized into 4 classes - resource constraining, security, networking, and storage.
+	- Resource constraining features allow container creators to place restrictions on container environments like memory usage, cpu, etc.,.
+	- Security features allow security policies to be applied on containers.
+	- Networking features allow for the SDN networking features provided by Docker.
+	- Storage features allow Docker to support volumes, and various storage backends.
+
+![Kernel Dep1](/images/kernel-dep1.png) ![Kernel Dep2](/images/kernel-dep2.png)
