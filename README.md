@@ -46,8 +46,7 @@ Control groups, or cgroups, is a kernel feature to constrain the resource usage 
 	- Control a group of processes.
 
 `docker run` command is used to manipulate resources allocated to a container.  
-For instance, `docker run --cpushares=<value>` sets the cpu share allocated to a container (every container gets 1024 shares by default).  
-`docker run --cpuset-cpus=<value>` sets the CPU core on which the container would be run.
+For instance, `docker run --cpushares=<value>` sets the cpu share allocated to a container (every container gets 1024 shares by default). `docker run --cpuset-cpus=<value>` sets the CPU core on which the container would be run.
 
 Please refer to [Resource Management in Docker](https://goldmann.pl/blog/2014/09/11/resource-management-in-docker/) to know how to customize the resource utilization in Docker.
 
