@@ -36,3 +36,18 @@ systemd-nspawn
 	- Storage features allow Docker to support volumes, and various storage backends.
 
 ![Kernel Dep1](/images/kernel-dep1.png) ![Kernel Dep2](/images/kernel-dep2.png)
+
+# Resource Constraining Dependencies
+- ***Control Groups (or) cgroups :***   
+Control groups, or cgroups, is a kernel feature to constrain the resource usage of a process or a set of processes. This provides Docker with the following features:
+	- Limit resources (CPI, memory, network, disk I/O, . . . ) to user-defined processes.
+	- Prioritize resources to processes (a set of processes will get more resources than another set).
+	- Measure resource usage for billing purposes.
+	- Control a group of processes.
+
+docker run command is used to manipulate resources allocated to a container. For instance, docker run --cpushares=<value> sets the cpu share allocated to a container (every container gets 1024 shares by default). docker run --cpuset-cpus=<value> sets the CPU core on which the container would be run.
+
+Please refer to [Resource Management in Docker](https://goldmann.pl/blog/2014/09/11/resource-management-in-docker/) to know how to customize the resource utilization in Docker.
+
+- ***Namespaces :***    
+Namespaces is a kernel feature that provides lightweight process virtualization to containers. This helps Docker to isolate these resources for a container - process IDs, hostnames, user IDs, network access, IPC and filesystems. Docker combines namespaces and cgroups to isolate resources for containers and place resource usage constraints. These namespaces are used to isolate containers - Process ID (pid), Network (net), Mount (mnt), Hostname (uts), Shared Memory (ipc).
