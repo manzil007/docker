@@ -1,4 +1,5 @@
-FROM 056684691971.dkr.ecr.us-east-1.amazonaws.com/sps-instantclient:latest
+FROM ubuntu:latest
+MAINTAINER vmsnivas <vmsnivas@gmail.com>
 
 RUN mkdir /install
 WORKDIR /install
