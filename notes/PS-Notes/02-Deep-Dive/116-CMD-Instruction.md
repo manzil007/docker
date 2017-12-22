@@ -18,6 +18,7 @@
 	- Commands in CMD instructions can be passed and treated in two forms
 		- Shell Form
 		- Exec Form
+		
 		| Shell Form | Exec Form |
 		|------------|-----------|
 		| Commands are expressed the way same as the shell commands | JSON array style - ["command","arg1"] |
