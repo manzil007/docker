@@ -9,4 +9,9 @@
 - CMD
 	- These are run time executions
 	- The instructions which need to be executed at runtime of a container can be given as the CMD instructions
-- 
+	- This is equilent to 
+		- `docker run <args> <command>`
+		- `docker run <args> /bin/bash`
+	- Through out the Dockerfile only one CMD instruction is allowed
+	- If we use more CMD instructions then the last one will be executed as everytime it gets overwritten
+	- This is possible even if we give one CMD instruction in the Dockerfile and we give the commands at the run time through `docker run` command
