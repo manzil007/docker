@@ -15,6 +15,15 @@
 	- Through out the Dockerfile only one CMD instruction is allowed
 	- If we use more CMD instructions then the last one will be executed as everytime it gets overwritten
 	- This is possible even if we give one CMD instruction in the Dockerfile and we give the commands at the run time through `docker run` command
+	- Commands in CMD instructions can be passed and treated in two forms
+		- Shell Form
+		- Exec Form
+		| Shell Form | Exec Form |
+		|------------|-----------|
+		| Commands are expressed the way same as the shell commands | JSON array style - ["command","arg1"] |
+		| Commands get prepended by "/bin/sh -c" | Containers don't need a shell |
+		| Variable expansion etc.. | Avoids string munging |
+		| | No shell features - Neither variable expansion nor special characters |
 
 | CMD | RUN |
 |-----|-----|
