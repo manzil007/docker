@@ -19,3 +19,6 @@
 | CMD | RUN |
 |-----|-----|
 | Run-Time | Build-Time |
+| Run commands in containers at launch time | Add layers to image |
+| Equivalent of `docker run <args> <command>` `docker run <args> /bin/bash` | Used to install apps |
+| One per Dockerfile | |
