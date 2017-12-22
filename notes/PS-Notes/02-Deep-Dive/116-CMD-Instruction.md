@@ -18,13 +18,15 @@
 	- Commands in CMD instructions can be passed and treated in two forms
 		- Shell Form
 		- Exec Form
-		
+
 		| Shell Form | Exec Form |
 		|------------|-----------|
 		| Commands are expressed the way same as the shell commands | JSON array style - ["command","arg1"] |
 		| Commands get prepended by "/bin/sh -c" | Containers don't need a shell |
 		| Variable expansion etc.. | Avoids string munging |
 		| | No shell features - Neither variable expansion nor special characters |
+
+- Below are some differences between `CMD` and `RUN`
 
 | CMD | RUN |
 |-----|-----|
