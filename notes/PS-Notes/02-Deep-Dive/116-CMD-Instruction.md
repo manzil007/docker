@@ -17,5 +17,5 @@
 	- This is possible even if we give one CMD instruction in the Dockerfile and we give the commands at the run time through `docker run` command
 
 CMD | RUN
----------
+---
 Run-Time | Build-Time
